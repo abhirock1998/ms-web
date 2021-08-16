@@ -1,0 +1,117 @@
+.professional-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 5%;
+}
+.professional-wrapper > .professional-content {
+  width: 45%;
+}
+.professional-wrapper > .professional-content:last-of-type {
+  margin-left: auto;
+}
+.professional-wrapper > .professional-content > h3 {
+  position: relative;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 120.5%;
+  color: #303030;
+  margin-bottom: 20px;
+}
+.professional-wrapper > .professional-content > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #303030;
+}
+.professional-wrapper > .professional-content > h3::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #ff9533;
+  left: -35px;
+  top: 0.5em;
+}
+.similar-grid > .professional-wrapper:not(:last-of-type) {
+  margin: 50px 0px;
+}
+.professional-wrapper-contact {
+  display: block;
+}
+.professional-wrapper-contact > h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 500;
+}
+.professional-form {
+  width: 50%;
+  /* border: 1px solid red; */
+}
+.professional-form-flex {
+  display: flex;
+  margin-bottom: 30px;
+}
+.professional-form-flex > .professional-form-half {
+  width: 50%;
+  display: flex;
+}
+.professional-form-flex > .professional-form-half:last-of-type {
+  margin-left: 20px;
+}
+.professional-form-flex > .professional-form-half > input,
+.professional-form-flex > input {
+  flex: 1;
+  /* padding: 10px; */
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+.professional-form-flex > .professional-form-half > input::placeholder,
+.professional-form-flex > input::placeholder {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+.professional-form > button {
+  width: 100px;
+  padding: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #f79420;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+}
+@media screen and (max-width: 1008px) {
+  .professional-form {
+    width: 100%;
+  }
+  .professional-wrapper > .professional-content {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .professional-wrapper > .professional-content > h3::before {
+    left: -20px;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .professional-form-flex {
+    flex-direction: column;
+  }
+  .professional-form-flex:first-of-type {
+    margin-bottom: 0;
+  }
+  .professional-form-flex > .professional-form-half {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .professional-form-flex > .professional-form-half:last-of-type {
+    margin-left: 0px;
+  }
+}

@@ -1,0 +1,294 @@
+.homePage > .homePage--grid > .homePage--overlay.recruitment {
+  background: rgba(0, 0, 0, 0.65);
+}
+.homePage > .homePage--grid.management > .homePage--overlay.recruitment {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.13) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#intro .grid .intro-heading.half.management.management {
+  background: rgba(92, 40, 236, 0.5);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px;
+  width: 50%;
+}
+
+.homePage > .homePage--grid > img {
+  width: 100%;
+  height: 110%;
+}
+/* dfdf */
+.homePage > .homePage--grid.hrms {
+  background: url(../../assests/hrms.png) no-repeat center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.homePage > .homePage--grid.recruitment {
+  background: url(../../assests/re.png) no-repeat center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.homePage > .homePage--grid.payroll {
+  background: url(../../assests/payroll-page.png) no-repeat center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.homePage > .homePage--grid.management {
+  background: url(../../assests/management.png) no-repeat center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.homePage > .homePage--grid.handyhr {
+  background: url(../../assests/hr.png) no-repeat center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.homePage > .homePage--grid.offboarding {
+  background: url(../../assests/offboarding.png) no-repeat center center;
+  background-size: cover !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.homePage > .homePage--grid.professional {
+  background: url(../../assests/professional.png) no-repeat center center;
+  background-size: cover !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.homePage .homePage--grid.facility {
+  background: url(../../assests/facility.png) no-repeat center center;
+  background-size: cover !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+/* asdasdf */
+#intro .grid .intro-heading.half.recruitment {
+  width: 60%;
+  margin: 0px 0px 50px;
+}
+#intro .grid .intro-heading.half.recruitment > h1 {
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+#intro .grid .intro-heading.half.recruitment > p {
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+#intro .grid.recruitment {
+  height: unset !important;
+}
+.job-requistion-section {
+  display: flex;
+  flex-wrap: wrap;
+  background: #ffe8cc;
+}
+.job-requistion-section > .job-right-section > img {
+  width: 100%;
+}
+.job-requistion-section > .job-left-section,
+.job-requistion-section > .job-right-section {
+  width: 50%;
+}
+.job-requistion-section > .job-left-section {
+  /* padding-right: 40px; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.job-requistion-section > .job-left-section > h2,
+.onboarding-section > .job-left-section > h2 {
+  color: #303030;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.job-requistion-section > .job-left-section > p,
+.onboarding-section > .job-left-section > p {
+  color: #303030;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 5px;
+  width: 90%;
+}
+.job-requistion-section > .job-right-section > img {
+  /* width: 100%; */
+  height: 375px;
+  display: block;
+  object-fit: contain;
+}
+.job-requistion-section.flexi-basket > .job-right-section > img {
+  height: 100%;
+}
+/* .job-requistion-section > .job-right-section {
+  padding-right: 4%;
+  overflow: hidden;
+} */
+.similar-grid {
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* Candidate */
+.recruitment-page-overlay {
+  position: relative;
+  border: 1px solid red;
+}
+.candidate-sourcing-section {
+  display: flex;
+  height: 400px;
+  background: url(../../assests/candidate.svg) no-repeat center center;
+  background-size: cover;
+}
+
+.candidate-sourcing-section > .job-left-section,
+.onboarding-section > .job-left-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.candidate-sourcing-section > .job-left-section > h2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.candidate-sourcing-section > .job-left-section > p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.applicant-tracking-section .job-left-section {
+  padding: 0px 8% 0px 4%;
+}
+
+.applicant-tracking-section > .job-requistion-section > .job-right-section {
+  padding-right: 0px;
+}
+.applicant-tracking-section
+  > .job-requistion-section
+  > .job-right-section
+  > img {
+  object-fit: cover;
+  height: 100%;
+}
+.onboarding-section {
+  display: flex;
+  background: #d2e0ff;
+}
+
+.integration-partner > h2 {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #303030;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1008px) {
+  #intro .grid .intro-heading.half.recruitment,
+  #intro .grid .intro-heading.half.hrms {
+    width: 90%;
+    background: rgba(211, 211, 211, 0.42);
+    /* backdrop-filter: blur(20px); */
+    border-radius: 4px;
+    padding: 10px;
+  }
+  #intro .grid .intro-heading.half.hrms.about-vision {
+    background: unset;
+  }
+  #intro .grid .intro-heading h1 {
+    margin-bottom: 0px;
+  }
+  .job-requistion-section > .job-left-section,
+  .job-requistion-section > .job-right-section,
+  .job-requistion-section > .job-left-section > p,
+  .onboarding-section > .job-left-section > p {
+    width: 100%;
+  }
+
+  /* section flex direction */
+  .job-requistion-section.requistion,
+  .onboarding-section.job-requistion-section {
+    flex-direction: column-reverse;
+  }
+  .job-requistion-section.requistion > .job-left-section,
+  .onboarding-section.job-requistion-section > .job-left-section {
+    margin-top: 30px;
+  }
+  .candidate-sourcing-section {
+    height: unset;
+    padding: 50px;
+    background-size: cover;
+  }
+  .candidate-sourcing-section > .job-left-section {
+    width: 70%;
+  }
+  .homePage > .homePage--grid > .homePage--overlay.recruitment {
+    background: transparent;
+  }
+  .homePage > .homePage--grid.payroll {
+    background: url(../../assests/small-payroll-hero.png) no-repeat center
+      center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  .homePage > .homePage--grid.handyhr {
+    background: url(../../assests/small-handy-hero.png) no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  .homePage > .homePage--grid.management {
+    background: url(../../assests/small-pre-hero.png) no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  /* .homePage > .homePage--grid.offboarding {
+    background-image: url(/images/small-off-hero.png);
+  } */
+
+  #intro .grid .intro-heading.half.recruitment > h1,
+  #intro .grid .intro-heading.half.hrms > h1 {
+    font-size: 0.9rem !important;
+  }
+  #intro .grid .intro-heading.half.recruitment > p,
+  #intro .grid .intro-heading.half.hrms > p {
+    font-size: 0.7rem;
+  }
+  #intro .grid .intro-heading.half.management.management {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .candidate-sourcing-section > .job-left-section > p {
+    width: 90%;
+  }
+}

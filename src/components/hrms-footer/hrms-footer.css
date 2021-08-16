@@ -1,0 +1,206 @@
+.hrms-footer {
+  background: #fff8ef;
+}
+.hrms-footer-inner {
+  display: flex;
+
+  /* flex-wrap: wrap; */
+}
+.footer-first-column > a > img,
+.footer-second-column > a > img {
+  height: 30px;
+}
+.footer-second-column > a > img {
+  display: none;
+}
+.footer-first-column > p {
+  color: #2e2e2e;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 50px 0px 20px 0px;
+  text-transform: capitalize;
+  width: 70%;
+}
+.footer-first-column {
+  width: 50%;
+}
+.footer-second-column {
+  width: 50%;
+  margin-top: 25px;
+  padding: 0px 10px;
+  border-left: 1px solid #000000;
+}
+
+.footer-first-column-subscribe-wrapper {
+  display: flex;
+  align-items: center;
+}
+.footer-first-column-subscribe-wrapper > input {
+  flex: 0.7;
+  padding: 10px;
+  margin-right: 20px;
+  outline: none;
+  color: #2e2e2e;
+  font-size: 12px;
+  background: transparent;
+  font-weight: 400;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.footer-first-column-subscribe-wrapper > input::placeholder {
+  color: #2e2e2e;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.footer-first-column-subscribe-wrapper > button {
+  padding: 10px 20px;
+  background-color: #f8a13c;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.footer-second-column-inner-flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+.footer-second-column-inner-flex .footer-second-column-inner-half {
+  width: 50%;
+}
+.footer-second-column-inner-flex .footer-second-column-inner-half > ul > li {
+  padding: 5px 0px;
+}
+.footer-second-column-inner-flex
+  .footer-second-column-inner-half
+  > ul
+  > li
+  > a {
+  font-size: 15px;
+  font-weight: 400;
+}
+.footer-third-column-social-icon-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.footer-third-column-social-icon-box > span {
+  font-weight: normal;
+  font-size: 11px;
+  color: #2e2e2e;
+  margin-left: 5px;
+}
+.footer-bottom-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.footer-bottom-wrapper .footer-bootom-box > span {
+  font-size: 15px;
+  font-weight: 400;
+  color: #2e2e2e;
+}
+.footer-bottom-wrapper .footer-bootom-box > address {
+  font-size: 13px;
+  color: #2e2e2e;
+  width: 45%;
+  font-weight: 400;
+  font-style: unset;
+}
+.footer-bottom-wrapper .footer-bootom-box > p {
+  font-weight: 400;
+  font-size: 12px;
+  color: #2e2e2e;
+}
+.footer-bottom-wrapper .footer-bootom-box > p:last-of-type {
+  text-align: right;
+}
+.hrms-footer-two-column-flex {
+  display: flex;
+}
+.hrms-footer-two-column-flex .footer-third-column {
+  width: 20%;
+  margin-top: 25px;
+  padding-left: 20px;
+  margin-left: 20px;
+  border-left: 1px solid #000000;
+}
+#chat-id {
+  display: none;
+}
+#location-id {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+@media screen and (max-width: 968px) {
+  .footer-first-column,
+  .footer-second-column {
+    width: 100%;
+    border-left: none;
+  }
+  .footer-first-column {
+    width: calc(150% - 7%);
+  }
+  .footer-first-column > a > img {
+    display: none;
+  }
+  .footer-second-column > a > img {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .footer-third-column-social-icon-box > img {
+    height: 30px;
+  }
+  .footer-second-column {
+    border-right: 1px solid #000000;
+  }
+  .footer-second-column-inner-flex .footer-second-column-inner-half {
+    width: 100%;
+  }
+  .hrms-footer-inner {
+    flex-wrap: wrap;
+    width: 70%;
+    flex-direction: column-reverse;
+  }
+  .hrms-footer-two-column-flex .footer-third-column {
+    border: none;
+  }
+  .footer-first-column > p {
+    width: 100%;
+  }
+  .footer-first-column-subscribe-wrapper {
+    flex-wrap: wrap;
+  }
+  .footer-first-column-subscribe-wrapper > input {
+    flex: 1;
+  }
+  .footer-bottom-wrapper .footer-bootom-box:last-of-type {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .footer-bottom-wrapper .footer-bootom-box:last-of-type > p {
+    text-align: center;
+  }
+
+  .footer-bottom-wrapper .footer-bootom-box > span,
+  .footer-bottom-wrapper .footer-bootom-box > address {
+    display: none;
+  }
+  .footer-third-column-social-icon-box {
+    margin-bottom: 20px;
+  }
+  .footer-second-column-inner-flex {
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 468px) {
+  .footer-first-column-subscribe-wrapper > button {
+    margin-top: 10px;
+  }
+}

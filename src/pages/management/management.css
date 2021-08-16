@@ -1,0 +1,24 @@
+.job-requistion-section.goal-setting {
+  background: #f9f9f9;
+}
+.job-requistion-section.kraandkpi {
+  background: #f1e1e2;
+}
+
+.job-requistion-section.promotion {
+  background: #e3f2ff;
+}
+.job-requistion-section.performance {
+  background: #fff;
+}
+.job-requistion-section.performance > .job-left-section > h2 {
+  width: 80%;
+  line-height: 120%;
+}
+.job-requistion-section.analysis {
+  background: #d2e0ff;
+}
+.job-requistion-section.performance > .job-left-section > h2,
+.job-requistion-section.performance > .job-left-section > p {
+  color: #f8a13c;
+}

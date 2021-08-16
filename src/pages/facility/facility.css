@@ -1,0 +1,142 @@
+#intro .intro-heading.half.hrms.facility-management > p > span {
+  font-size: 7rem;
+  display: block;
+  font-weight: 700;
+  letter-spacing: 0rem;
+  line-height: 100%;
+}
+#intro .grid .intro-heading.half.hrms.facility-management {
+  display: flex;
+  flex-direction: column;
+}
+#intro .intro-heading.half.hrms.facility-management > p {
+  font-size: 5rem;
+  font-weight: 400;
+  letter-spacing: 0.8rem;
+}
+#intro .intro-heading.half.hrms.facility-management h1#heading {
+  width: 50%;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.facility-management-facility {
+  background: #0d0c22;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+  padding-bottom: 0%;
+  padding-top: 7%;
+}
+.facility-card {
+  display: flex;
+  width: 33%;
+  margin-bottom: 10%;
+  justify-content: center;
+}
+.facility-card .facility-card-image {
+  position: relative;
+}
+
+.facility-card .facility-card-image > img:first-of-type {
+  position: absolute;
+  z-index: 10;
+  top: 30%;
+  left: -40%;
+}
+#travel-facility-icon {
+  top: 20%;
+}
+.facility-card > h2 {
+  transform: rotate(90deg);
+  height: 50px;
+  width: 60px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 120.5%;
+  color: #ffffff;
+}
+.facility-management-video-section {
+  background: #0d0c22;
+  display: flex;
+  justify-content: center;
+  padding: 5% 0px;
+}
+.facility-management-video-section > .facility-management-video-holder {
+  width: 50%;
+  position: relative;
+}
+.facility-management-video-section > .facility-management-video-holder > video {
+  width: 100%;
+}
+.facility-management-video-section
+  > .facility-management-video-holder
+  > .play-btn-video {
+  position: absolute;
+  top: 50%;
+  display: none;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.facility-management-video-section
+  > .facility-management-video-holder:hover
+  > .play-btn-video {
+  display: block;
+}
+.facility-management-video-section
+  > .facility-management-video-holder
+  > .play-btn-video
+  > img {
+  cursor: pointer;
+}
+@media screen and (max-width: 1008px) {
+  #intro .grid .intro-heading.half.hrms.facility-management {
+    margin: 0px 0px 100px;
+    background: unset;
+    padding: 0px;
+    flex-direction: column-reverse;
+  }
+  #intro .intro-heading.half.hrms.facility-management h1#heading {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .facility-card {
+    width: 50%;
+    margin-bottom: 20%;
+  }
+  .facility-card > h2 {
+    font-size: 20px;
+  }
+  #intro .intro-heading.half.hrms.facility-management > p > span {
+    font-size: 4rem;
+  }
+  #intro .intro-heading.half.hrms.facility-management > p {
+    font-size: 3rem;
+  }
+  .facility-management-video-section > .facility-management-video-holder {
+    width: 90%;
+  }
+  .facility-card .facility-card-image > img {
+    height: 150px;
+  }
+  #intro .intro-heading.half.hrms.facility-management > p {
+    letter-spacing: 0.1rem;
+  }
+}
+@media screen and (max-width: 468px) {
+  .facility-card > h2 {
+    font-size: 15px;
+    width: 20px;
+  }
+  .facility-card .facility-card-image > img {
+    height: 100px;
+  }
+  #intro .intro-heading.half.hrms.facility-management > p {
+    font-size: 2.5rem;
+  }
+}

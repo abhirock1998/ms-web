@@ -1,0 +1,297 @@
+.homePage {
+  height: 100vh;
+}
+.homePage--grid {
+  height: 100%;
+  width: 100%;
+}
+.homePage--grid.home-page-video {
+  background: rgba(245, 126, 31, 1);
+}
+.homePage--grid > video {
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.homePage--overlay {
+  position: absolute;
+  /* background: rgba(245, 126, 31, 0.5); */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.points__row.points__row--middle {
+  display: flex;
+}
+.points__row.points__row--middle .point:nth-child(2),
+.points__row.points__row--middle .point:nth-child(1) {
+  opacity: 0;
+}
+#intro .grid .grid-company-logo > a {
+  position: absolute;
+  top: 4%;
+  z-index: 200;
+}
+#intro .grid .grid-company-logo > a > img {
+  height: 30px;
+}
+#intro.intro--index .intro__content {
+  height: 100vh;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+#intro.intro--index .intro__content,
+#intro.intro--index .intro__heading {
+  width: 50%;
+}
+#intro.intro--index .intro__content .intro__content__links {
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+#intro.intro--index .intro__content .intro__content__links .scroll-content {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: "smooth";
+}
+#intro.intro--index
+  .intro__content
+  .intro__content__links
+  .scroll-content::-webkit-scrollbar {
+  display: none;
+}
+#intro.intro--index .intro__content .intro__content__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+#intro.intro--index
+  .intro__content
+  .intro__content__contacts
+  .intro__content__contacts-anim {
+  color: #fff;
+
+  max-width: 70%;
+  margin: 0px auto;
+  margin-bottom: 40px;
+}
+#intro.intro--index
+  .intro__content
+  .intro__content__contacts
+  .intro__content__contacts-anim
+  > small {
+  font-weight: 400;
+  font-size: 17px;
+  margin-bottom: 10px;
+  letter-spacing: unset;
+}
+#intro.intro--index
+  .intro__content
+  .intro__content__contacts
+  .intro__content__contacts-anim
+  > p {
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+#intro.intro--index .scroll-content .scroll-content-border {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 1px;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  transform-origin: top;
+}
+#intro.intro--index
+  .scroll-content
+  .scroll-content-border.scroll-content-left-side-border {
+  left: 0;
+}
+#intro.intro--index
+  .scroll-content
+  .scroll-content-border.scroll-content-right-side-border {
+  right: 0;
+}
+.intro-content-link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+#intro.intro--index
+  .intro__content
+  .intro__content__links
+  .intro-content-link-container
+  a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: calc(50vh - 1px);
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  border-top: none;
+  transition: all 0.5s ease;
+  position: relative;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.4);
+}
+#intro.intro--index
+  .intro__content
+  .intro__content__links
+  .intro-content-link-container
+  a
+  .btn-container {
+  transform: scaleX(0);
+}
+#intro.intro--index
+  .intro__content
+  .intro__content__links
+  .intro-content-link-container
+  a:hover {
+  background: rgba(245, 126, 31, 1);
+}
+#intro.intro--index
+  .intro__content
+  .intro__content__links
+  .intro-content-link-container
+  a:hover
+  .btn-container {
+  transform: scaleX(1);
+  transition: transform 0.5s ease;
+}
+.home-page-btn {
+  padding: 9px 15px;
+  display: flex;
+  max-width: 100%;
+  margin: 0px auto;
+  margin-top: 20px;
+  font-size: 18px;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid #fff;
+  justify-content: center;
+}
+
+.home-page-login-btn:hover,
+.home-page-btn:hover {
+  background: rgba(245, 126, 31, 1);
+  border: 2px solid transparent;
+  transition: all 0.5s ease-in-out;
+}
+#intro .grid .intro-heading.half.home-page {
+  margin-bottom: 50px;
+}
+#intro .grid .intro-heading.half.home-page > h1 {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+.small-device-home-page-wrapper {
+  display: none;
+}
+.small-device-home-page-wrapper > ul {
+  /* border: 1px solid red; */
+  height: 35vh;
+  overflow-y: scroll;
+}
+.small-device-home-page-wrapper > ul > li > a {
+  font-size: 1em;
+  display: block;
+  pointer-events: auto;
+  color: #fff;
+  padding: 10px 0px;
+  line-height: 1;
+  font-weight: 300;
+  transition: color 0.2s ease;
+}
+.small-device-home-page-button-wrapper {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.small-device-home-page-button-wrapper > a {
+  width: 100px;
+  padding: 10px;
+  border: 1px solid #fff;
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+}
+.contact-list.contact-list--white.contact-list--small > ul > li {
+  line-height: 120%;
+  margin-bottom: 10px;
+}
+.contact-list.contact-list--white.contact-list--small > ul > li > label {
+  font-size: 0.95rem;
+
+  font-weight: 300;
+}
+.contact-list.contact-list--white.contact-list--small > ul > li > a {
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+.contact-list.contact-list--white.contact-list--small
+  > ul
+  > li:last-of-type
+  > a {
+  letter-spacing: 0.1rem;
+}
+@media screen and (max-width: 1280px) {
+  #intro.intro--index
+    .intro__content
+    .intro__content__contacts
+    .intro__content__contacts-anim {
+    padding: 0 5px 40px;
+  }
+  .home-page-btn {
+    margin: 0px;
+    margin-top: 20px;
+  }
+  #intro.intro--index
+    .intro__content
+    .intro__content__contacts
+    .intro__content__contacts-anim
+    > p {
+    font-size: 13px;
+  }
+}
+/* at this screen resolution we remove scroll bar */
+@media screen and (max-width: 1108px) {
+  #intro.intro--index .intro__content,
+  #intro.intro--index .intro__heading {
+    display: none;
+  }
+  #intro .grid .intro-heading.half.home-page > h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .small-device-home-page-wrapper {
+    display: block;
+  }
+}
+@media screen and (max-width: 968px) {
+  .small-device-home-page-wrapper > ul > li > a {
+    border-bottom: 1px solid gray;
+  }
+  #intro .grid .intro-heading.half.home-page > h1 {
+    font-size: 1rem;
+  }
+}

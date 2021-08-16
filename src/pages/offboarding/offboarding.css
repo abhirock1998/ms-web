@@ -1,0 +1,46 @@
+.bigpayroll-container.offboarding > .bigpayroll-rightside > img {
+  height: 570px;
+  width: 300px;
+}
+.bigpayroll-container.offboarding > .bigpayroll-rightside {
+  display: flex;
+  justify-content: center;
+}
+.bigpayroll-container.offboarding {
+  background: unset;
+}
+.bigpayroll-container.offboarding
+  > .bigpayroll-leftside
+  > .bigpayroll-contentBox:not(:first-of-type) {
+  margin-top: 0px;
+}
+.job-requistion-section.exit {
+  background: #edeaff;
+}
+.bigpayroll-container.offboarding
+  > .bigpayroll-leftside
+  > .bigpayroll-contentBox
+  > p {
+  width: 100%;
+}
+.bigpayroll-container.offboarding
+  > .bigpayroll-leftside
+  > .bigpayroll-contentBox:last-of-type {
+  margin-bottom: 0;
+}
+.bigpayroll-container.offboarding
+  > .bigpayroll-leftside
+  > .bigpayroll-contentBox {
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 1008px) {
+  .bigpayroll-container.offboarding {
+    flex-direction: column-reverse;
+  }
+  .bigpayroll-container.offboarding > .bigpayroll-rightside {
+    justify-content: unset;
+  }
+  .bigpayroll-container.offboarding > .bigpayroll-rightside > img {
+    height: 300px;
+  }
+}

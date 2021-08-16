@@ -1,0 +1,278 @@
+#intro .grid .intro-heading.half.hrms {
+  width: 90%;
+  margin: 0px 0px 50px;
+}
+#intro .grid .intro-heading.half.hrms > h1 {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+#intro .grid .intro-heading.half.hrms > p {
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.job-requistion-section.hrms {
+  background: #f79420;
+}
+.job-requistion-section.hrms > .job-right-section > img {
+  width: 100%;
+}
+.job-requistion-section.hrms > .job-left-section > h2,
+.job-requistion-section.hrms > .job-left-section > p {
+  color: #fff;
+}
+.job-requistion-section.employee {
+  background: #ffffff;
+}
+/* .job-requistion-section.employee > .job-left-section.center {
+  display: flex;
+  align-items: center;
+} */
+/* .job-requistion-section.helpdesk */
+.job-requistion-section.time,
+.job-requistion-section.helpdesk {
+  background: #fff3f3;
+  /* padding-top: 0px;
+  padding-bottom: 0px; */
+}
+.job-requistion-section.time > .job-left-section > h2 {
+  color: #f8a13c;
+}
+.job-requistion-section.time > .job-left-section > p {
+  color: #dba861;
+}
+.job-requistion-section.form {
+  background: #f9eeda;
+  margin-top: -20px;
+}
+.job-requistion-section.chatbot {
+  background: #ffffff;
+}
+.job-requistion-section.chatbot > .job-left-section > h2 {
+  text-align: left;
+  color: #303030;
+}
+.job-requistion-section.chatbot > .job-left-section > p {
+  color: #303030;
+}
+.hrms-handyhrms-app {
+  padding: 30px 0px;
+}
+.hrms-handyhrms-app > h2 {
+  font-weight: 500;
+  font-size: 3rem;
+  text-align: center;
+}
+.hrms-handyhrms-app > img {
+  height: 700px;
+  width: calc(100% - 7.5%);
+}
+.hrms-handyhrms-app > p {
+  text-align: center;
+  margin-top: 20px;
+}
+.download-app-section {
+  display: flex;
+  margin-right: 7.5%;
+  padding: 50px;
+  background: #f79420;
+}
+.download-app-section > .left-section {
+  width: 70%;
+}
+.download-app-section > .left-section > h3 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.download-app-section > .right-section {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.download-app-section > .right-section #download-app-btn {
+  background: #fff;
+  color: #f79420;
+  padding: 12px 24px;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+.hrms-org-chart-section {
+  background: #1a203a;
+  padding: 40px 0px;
+  position: relative;
+}
+.hrms-org-chart-section > h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.hrms-org-chart-section > .chart-poster-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hrms-org-chart-section > .chart-poster-holder > img {
+  height: 550px;
+  object-fit: contain;
+}
+.hrms-org-chart-section > .hrms-section-content {
+  position: absolute;
+  width: 350px;
+  right: 9%;
+  bottom: 50px;
+}
+.hrms-org-chart-section > .hrms-section-content > p,
+#small-device-subtext {
+  font-size: 13px;
+  color: #fff;
+  font-weight: 300;
+  text-align: right;
+}
+#small-device-subtext {
+  width: 40%;
+  margin: 0px auto;
+  text-align: center;
+  display: none;
+  margin-bottom: 20px;
+}
+.hrms-travel-flex {
+  display: flex;
+  padding: 0px 7.5%;
+  padding-top: 30px;
+  /* position: absolute;
+  top: 30px;
+  left: 7.5%;
+  right: 7.5%; */
+}
+.hrms-travel-flex > .hrms-travel-section-left,
+.hrms-travel-flex > .hrms-travel-section-right {
+  width: 50%;
+}
+
+.hrms-travel-flex > .hrms-travel-section-left > p,
+.hrms-travel-flex > .hrms-travel-section-right > p {
+  width: 90%;
+}
+.hrms-travel-flex > .hrms-travel-section-left > h2,
+.hrms-travel-flex > .hrms-travel-section-right > h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.job-requistion-section.time > .job-right-section {
+  display: flex;
+  /* width: 100%; */
+  align-items: center;
+  justify-content: center;
+}
+.hrms-handyhrms-holder > img {
+  width: 100%;
+}
+.hrms-travel-assistance {
+  height: 880px;
+  background: url(../../assests/travel.png) no-repeat center center;
+  background-size: cover;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.job-requistion-section.chatbot > .job-right-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.job-requistion-section.chatbot > .job-right-section > video {
+  width: 80%;
+  margin: 0px auto;
+  border-radius: 10px;
+  height: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+  .hrms-org-chart-section > .hrms-section-content {
+    display: none;
+  }
+  #small-device-subtext {
+    display: block;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1008px) {
+  #intro .grid .intro-heading.half.hrms {
+    width: 100%;
+  }
+  .job-requistion-section.hrms {
+    flex-direction: column-reverse;
+  }
+  .hrms-org-chart-section > .chart-poster-holder {
+    padding: 0px 3%;
+  }
+  .hrms-org-chart-section > .chart-poster-holder > img {
+    width: 100%;
+    height: auto;
+  }
+  .job-requistion-section.time,
+  .job-requistion-section.helpdesk {
+    flex-direction: column-reverse;
+  }
+  .download-app-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .download-app-section > .left-section {
+    width: 100%;
+  }
+  .download-app-section > .right-section {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .hrms-travel-flex > .hrms-travel-section-left > h2,
+  .hrms-travel-flex > .hrms-travel-section-left > p,
+  .hrms-travel-flex > .hrms-travel-section-right > h2,
+  .hrms-travel-flex > .hrms-travel-section-right > p {
+    padding: 0px 2%;
+    padding-top: 3%;
+  }
+  .hrms-travel-assistance {
+    overflow-y: unset;
+    margin-bottom: 20px;
+  }
+
+  .hrms-travel-assistance > img {
+    display: none;
+  }
+  .job-requistion-section.chatbot > .job-right-section > video {
+    width: 80%;
+    border-radius: 10px;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .hrms-travel-flex > .hrms-travel-section-left {
+    width: 100%;
+    height: 440px;
+  }
+  .hrms-travel-flex {
+    flex-direction: column;
+    padding: 0px;
+  }
+  .hrms-travel-flex > .hrms-travel-section-right {
+    width: 100%;
+    height: 440px;
+  }
+  .hrms-travel-assistance {
+    background: url(../../assests/small-travel.png) no-repeat center center;
+    background-size: cover;
+  }
+}

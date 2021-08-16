@@ -1,0 +1,139 @@
+#intro {
+  position: relative;
+  background-color: #0681da;
+  background-size: cover;
+  border: 1px solid white;
+}
+#intro.not {
+  background: transparent;
+  border: none;
+}
+.grid {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 85%;
+  width: 100%;
+}
+#intro .grid {
+  display: flex;
+  height: 100vh !important;
+  overflow: hidden;
+  align-items: flex-end;
+  position: relative;
+  z-index: 2;
+  will-change: transform, opacity;
+}
+#intro .grid.not-hero {
+  align-items: unset;
+  width: 100%;
+}
+#intro .grid .intro-heading {
+  z-index: 10px;
+  transition: transform all ease-in-out;
+}
+#intro .grid .intro-heading h1 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: left;
+}
+#intro .grid .intro-heading {
+  margin: 0 0 100px;
+  width: 800px;
+}
+#intro .grid .intro-heading.half {
+  width: 50%;
+}
+small.white {
+  color: #fff;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.points {
+  position: absolute;
+  /* background: rgba(0, 0, 0, 0.5); */
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  pointer-events: none;
+}
+.points .grid--points {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100%;
+  /* padding: 80px 0; */
+}
+.point {
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+}
+.points .points__row.points__row--upper {
+  margin-top: 40px;
+}
+
+.points .points__row.points__row--bottom {
+  margin-bottom: 40px;
+}
+.points.points--intro .points__row.points__row--upper .point:first-child {
+  opacity: 0;
+}
+.points .points__row.points__row--upper .mega-logo {
+  height: 20px;
+  transform: translateX(-50%);
+  object-fit: contain;
+}
+.points .points__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#intro .intro--bg {
+  position: absolute;
+  background-image: url(https://www.neosoft.ch/static/service-support-intro-mobile-1-f8cdb36844a1e02e183d2f577945343e.jpg);
+  background-repeat: no-repeat;
+  z-index: 1;
+
+  will-change: transform, opacity;
+  background-size: auto 100%;
+  background-position: 92% center;
+  overflow: hidden;
+}
+
+#intro.intro--inner .intro--bg {
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  transform: scale(1.15);
+  transform-origin: bottom;
+}
+
+/* MY CUSTOM CSS IS START HERE */
+.intro--inner {
+  height: 100vh;
+}
+/* .support-text {
+  margin: 0 0 180px;
+  width: 600px;
+} */
+@media screen and (max-width: 1108px) {
+  .points {
+    display: none;
+  }
+  #intro .grid .intro-heading.half {
+    width: 100%;
+  }
+}

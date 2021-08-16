@@ -1,0 +1,13 @@
+export { default as HomePageComponent } from "./home/Home";
+export { default as DemoPage } from "./demo/Demo";
+export { default as RecruitmentPage } from "./recruitment/Recruitment";
+export { default as HrmsPage } from "./hrms/HRMS";
+export { default as PayrollPage } from "./payroll/Payroll";
+export { default as ManagementPage } from "./management/Management";
+export { default as HandyHRPage } from "./handyhr/HandyHr";
+export { default as ProfessionalManegementPage } from "./professional/Professional";
+export { default as AboutAndVisionPage } from "./about/About";
+export { default as OffboardingPage } from "./offboarding/Offboarding";
+export { default as CompanyDemoPage } from "./demo-page/DemoPage";
+export { default as LoginPage } from "./login/Login";
+export { default as FacilityManagementPage } from "./facility/Facility";

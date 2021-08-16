@@ -1,0 +1,109 @@
+.job-requistion-section.processing {
+  background: #fff2ef;
+}
+/* .job-requistion-section.processing > .job-right-section {
+  padding-right: 7%;
+} */
+.job-requistion-section.flexi-basket {
+  background: #f79420;
+}
+.job-requistion-section.flexi-basket > .job-left-section > h2,
+.job-requistion-section.flexi-basket > .job-left-section > p {
+  color: #fff;
+}
+.job-requistion-section.flexi-basket > .job-left-section > p {
+  width: 80%;
+}
+.bigpayroll-container {
+  background: #f0fffa;
+  display: flex;
+  background-image: url(../../assests/tree.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.bigpayroll-container > .bigpayroll-leftside,
+.bigpayroll-container > .bigpayroll-rightside {
+  width: 49%;
+}
+.bigpayroll-contentBox {
+  margin-bottom: 55px;
+}
+.bigpayroll-container > .bigpayroll-rightside > img {
+  width: 100%;
+  margin-top: 40px;
+}
+.bigpayroll-container > .bigpayroll-leftside > .bigpayroll-contentBox > h2 {
+  font-weight: 600;
+  font-size: 1.7rem;
+  line-height: 120%;
+  width: 90%;
+  text-transform: uppercase;
+}
+.bigpayroll-container > .bigpayroll-leftside > .bigpayroll-contentBox > p {
+  font-weight: 300;
+  width: 80%;
+  font-size: 1rem;
+}
+.bigpayroll-container > .bigpayroll-leftside {
+  display: block;
+}
+.bigpayroll-container
+  > .bigpayroll-leftside
+  > .bigpayroll-contentBox:not(:first-of-type) {
+  margin-top: 30px;
+}
+.bigpayroll-container
+  > .bigpayroll-leftside
+  > .bigpayroll-contentBox:first-of-type {
+  margin-top: 50px;
+}
+.payroll-inmtegration-partner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.payroll-inmtegration-partner > h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+}
+.payroll-inmtegration-partner > img {
+  width: 70%;
+  margin-top: 30px;
+  object-fit: contain;
+  text-align: center;
+}
+@media screen and (max-width: 1008px) {
+  .job-requistion-section.flexi-basket > .job-left-section > p {
+    width: 100%;
+  }
+  .bigpayroll-container > .bigpayroll-rightside {
+    display: none;
+  }
+  .bigpayroll-container > .bigpayroll-leftside,
+  .bigpayroll-container > .bigpayroll-leftside > .bigpayroll-contentBox > h2,
+  .bigpayroll-container > .bigpayroll-leftside > .bigpayroll-contentBox > p {
+    width: 100%;
+  }
+  .bigpayroll-container {
+    background-image: url(../../assests/small-tree.png);
+  }
+  .payroll-inmtegration-partner > h2 {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  .payroll-inmtegration-partner > img {
+    width: 100%;
+  }
+}
+/* @media screen and (max-width: 968px) {
+  .intro-heading.half.handyHr.recruitment {
+    display: none;
+  }
+} */
+@media screen and (max-width: 768px) {
+  .payroll-inmtegration-partner > h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
