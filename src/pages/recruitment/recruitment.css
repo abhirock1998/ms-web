@@ -215,6 +215,9 @@
     border-radius: 4px;
     padding: 10px;
   }
+  #intro .grid .intro-heading.half.recruitment.offboarding-hero {
+    background: rgba(97, 97, 97, 0.55);
+  }
   #intro .grid .intro-heading.half.hrms.about-vision {
     background: unset;
   }

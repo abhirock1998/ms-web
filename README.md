@@ -12,3 +12,8 @@ for running this command you have to install npm in your Computer for more detai
 `npm run build`
 
 > for adding the facility card image in card chang the image and icon location in `src/fixtures/facility-card-list.js`
+
+> for production you have to change EMAIlJS Config so that we can use it
+
+because in dev mode emailjs has 200 mail in 1 months so for more Email upgrade package and change
+and after upgrading use that credentials in `.env` in App root folder

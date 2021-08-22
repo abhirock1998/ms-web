@@ -2,7 +2,7 @@ export const PathConfig = {
   home: "/",
   hrms: "/hrms",
   payroll: "/payroll",
-  recruitment: "/recruitment",
+  recruitment: "/talent-acquisition",
   performanceManagement: "/performance-management",
   facilityManagement: "/facility-management",
   contact: "/contact",
@@ -12,7 +12,7 @@ export const PathConfig = {
   offboarding: "/offboarding",
   login: "/login",
   professionalService: "/professional-services",
-  dataAndSecurity: "/data-security-and-privacy"
+  dataAndSecurity: "/data-security-and-privacy",
 };
 export const RoutesPathConfig = {
   languageSelect: "/",
@@ -28,5 +28,5 @@ export const RoutesPathConfig = {
   handyHr: `/:id${PathConfig.handyHr}`,
   offboarding: `/:id${PathConfig.offboarding}`,
   login: `/:id${PathConfig.login}`,
-  professionalService: `/:id${PathConfig.professionalService}`
+  professionalService: `/:id${PathConfig.professionalService}`,
 };

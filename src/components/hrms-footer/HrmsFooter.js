@@ -64,7 +64,7 @@ export default function HrmsFotter() {
             <a
               id={`${icon.title}-id`}
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               href={icon.link}
               key={i}
               className="footer-third-column-social-icon-box"

@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./management.css";
 import { GoToHomePageLinkLogo, HrmsFooterComp } from "../../components";
-export default function PerformanceManagement() {
+import { amountscrolled } from "../../helper/scroll";
+export default function PerformanceManagement({ setPos }) {
+  useEffect(() => {
+    const scrollHandle = () => {
+      var perc = amountscrolled();
+      setPos((p) => perc * 1.07);
+    };
+    window.addEventListener("scroll", scrollHandle, false);
+    return () => {
+      window.removeEventListener("scroll", scrollHandle, false);
+    };
+  }, []);
   return (
     <div className="homePage">
       <div className="homePage--grid management">
-        {/* <img alt="recruitment-poster" src="/images/management.png" /> */}
         <div className="homePage--overlay recruitment">
           <div id="intro" className="intro--index not">
             <div className="grid   hero-parent  ">

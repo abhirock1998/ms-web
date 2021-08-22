@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./offboarding.css";
 import { GoToHomePageLinkLogo, HrmsFooterComp } from "../../components";
-export default function OffBoarding() {
+import { amountscrolled } from "../../helper/scroll";
+export default function OffBoarding({ setPos }) {
+  useEffect(() => {
+    const scrollHandle = () => {
+      var perc = amountscrolled();
+      setPos((p) => perc * 1.07);
+    };
+    window.addEventListener("scroll", scrollHandle, false);
+    return () => {
+      window.removeEventListener("scroll", scrollHandle, false);
+    };
+  }, []);
   return (
     <div className="homePage">
       <div className="homePage--grid offboarding">
-        {/* <img alt="recruitment-poster" src="/images/payroll.png" /> */}
         <div className="homePage--overlay recruitment">
           <div id="intro" className="intro--index not">
             <div className="grid   hero-parent  ">
               <div className="grid-company-logo">
                 <GoToHomePageLinkLogo />
               </div>
-              <div className="intro-heading half recruitment  ">
+              <div className="intro-heading half recruitment  offboarding-hero ">
                 <p>Offboarding</p>
                 <h1 id="heading">
                   Whether you are an HR manager or a manager in charge of the
@@ -37,7 +47,6 @@ export default function OffBoarding() {
               <img src="/images/exit.svg" alt="job-requistion-section-poster" />
             </div>
           </div>
-
           <div className="bigpayroll-container offboarding similar-grid">
             <div className="bigpayroll-leftside">
               <div className="bigpayroll-contentBox">

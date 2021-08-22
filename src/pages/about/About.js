@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./about.css";
 import { GoToHomePageLinkLogo, HrmsFooterComp } from "../../components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { PathConfig } from "../../fixtures/routes-path-config";
-export default function About() {
+import { amountscrolled } from "../../helper/scroll";
+export default function About({ setPos }) {
   const { selectedLanguage } = useSelector((state) => state);
+  useEffect(() => {
+    const scrollHandle = () => {
+      var perc = amountscrolled();
+      setPos((p) => perc * 1.07);
+    };
+    window.addEventListener("scroll", scrollHandle, false);
+    return () => {
+      window.removeEventListener("scroll", scrollHandle, false);
+    };
+  }, []);
   return (
     <div className="homePage">
       <div className="homePage--grid about-and-vision">

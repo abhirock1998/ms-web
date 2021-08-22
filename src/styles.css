@@ -1,6 +1,6 @@
 * {
   margin: 0;
-
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   overscroll-behavior: none !important;
 }
@@ -70,6 +70,7 @@ aside {
   right: 0;
   height: 100vh;
   top: 0;
+  bottom: 0;
   z-index: 101;
   width: 7.55%;
 }
@@ -170,6 +171,7 @@ aside {
 
 .scrollbar-line {
   position: fixed;
+
   right: calc(7.55% + 1px);
   height: 100vh;
   width: 1px;

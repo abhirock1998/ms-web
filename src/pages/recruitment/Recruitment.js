@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./recruitment.css";
 import { GoToHomePageLinkLogo, HrmsFooterComp } from "../../components";
-export default function RecruitmentComponent() {
+import { amountscrolled } from "../../helper/scroll";
+export default function RecruitmentComponent({ setPos }) {
+  useEffect(() => {
+    const scrollHandle = () => {
+      var perc = amountscrolled();
+      setPos((p) => perc * 1.07);
+    };
+    window.addEventListener("scroll", scrollHandle, false);
+    return () => {
+      window.removeEventListener("scroll", scrollHandle, false);
+    };
+  }, []);
   return (
     <div className="homePage">
       <div className="homePage--grid    recruitment">
-        {/* <img alt="recruitment-poster" src="/images/re.png" /> */}
-
         <div className="homePage--overlay recruitment">
           <div id="intro" className="intro--index not">
             <div className="grid   hero-parent  ">
@@ -14,14 +23,13 @@ export default function RecruitmentComponent() {
                 <GoToHomePageLinkLogo />
               </div>
               <div className="intro-heading half recruitment">
-                <p>Recruitment</p>
+                <p>Talent Acquisition</p>
                 <h1 id="heading">
                   An all-in-one hiring tool designed to make sourcing, managing
                   and onboarding your next hire a breeze.
                 </h1>
               </div>
             </div>
-
             <div className="job-requistion-section requistion   similar-grid">
               <div className="job-left-section">
                 <h2>Job Requisition</h2>
@@ -49,7 +57,6 @@ export default function RecruitmentComponent() {
                 </p>
               </div>
             </div>
-            {/* <div className="applicant-tracking-section"> */}
             <div className="job-requistion-section similar-grid ">
               <div className="job-right-section">
                 <img
@@ -67,7 +74,6 @@ export default function RecruitmentComponent() {
                 </p>
               </div>
             </div>
-            {/* </div> */}
             <div className="onboarding-section job-requistion-section  similar-grid">
               <div className="job-left-section">
                 <h2>Onboarding </h2>

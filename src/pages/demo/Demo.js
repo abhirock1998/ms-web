@@ -1,7 +1,5 @@
 import React from "react";
 import "./demo.css";
-// import wave from "../../assest/wave.mp4";
-
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 export default function DemoPage() {
@@ -25,9 +23,6 @@ export default function DemoPage() {
   return (
     <div className="demo--page">
       <div className="demo-page-static">
-        <div className="demo-page-video">
-          {/* <video src={wave} autoPlay muted loop playsInline /> */}
-        </div>
         <div className="demo-page-second-overlay animate-class">
           <div className="grid">
             <div className="top-left-lang">

@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./payroll.css";
 import { GoToHomePageLinkLogo, HrmsFooterComp } from "../../components";
+import { amountscrolled } from "../../helper/scroll";
 
-export default function PayrollComponent() {
+export default function PayrollComponent({ setPos }) {
+  useEffect(() => {
+    const scrollHandle = () => {
+      var perc = amountscrolled();
+      setPos((p) => perc * 1.07);
+    };
+    window.addEventListener("scroll", scrollHandle, false);
+    return () => {
+      window.removeEventListener("scroll", scrollHandle, false);
+    };
+  }, []);
   return (
     <div className="homePage">
       <div className="homePage--grid payroll">
-        {/* <img alt="recruitment-poster" src="/images/payroll-page.png" /> */}
         <div className="homePage--overlay recruitment">
           <div id="intro" className="intro--index not">
             <div className="grid   hero-parent  ">

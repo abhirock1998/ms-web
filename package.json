@@ -2,10 +2,13 @@
   "name": "ms-website",
   "version": "1.0.0",
   "description": "MS website using ReactJS framework with fully responsiveness for all devices",
-  "keywords": ["react", "starter"],
-  "main": "src/index.js",
+  "keywords": [
+    "react",
+    "starter"
+  ],
   "dependencies": {
     "@vitalets/google-translate-api": "7.0.0",
+    "emailjs-com": "^3.2.0",
     "gsap": "3.6.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -20,11 +23,16 @@
     "typescript": "4.1.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=3001 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
-  "author": "Ahishek <yaduvanshiabhi1998@gmail.com> (https://abhishek-portfolio-89178.web.app/)"
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "author": "Abhishek <yaduvanshiabhi1998@gmail.com> (https://abhishek-portfolio-89178.web.app/)"
 }

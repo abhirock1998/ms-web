@@ -26,6 +26,9 @@
   width: 40%;
   padding: 20px;
 }
+.hrms-handyhr-section.vision-about > .vision-first > img {
+  width: 50%;
+}
 .hrms-handyhr-section.vision-about > .vision-first > h3 {
   font-weight: 500;
   font-size: 50px;

@@ -13,7 +13,7 @@ import {
   PayrollPage,
   ProfessionalManegementPage,
   RecruitmentPage,
-  FacilityManagementPage
+  FacilityManagementPage,
 } from "./pages";
 import "./styles.css";
 import { MenuSliderComp } from "./components";
@@ -32,7 +32,7 @@ export default function App() {
   };
   return (
     <div className="App">
-      {/* Page content */}
+      {/* ALL PAGES AND THEIR ROUTES GORS HERE*/}
       <section data-scrollbar="true" id="scroll-container">
         <Switch>
           <Route path={RoutesPathConfig.contact}>
@@ -42,34 +42,34 @@ export default function App() {
             <LoginPage />
           </Route>
           <Route path={RoutesPathConfig.takeaDemo}>
-            <CompanyDemoPage />
+            <CompanyDemoPage setPos={setPos} />
           </Route>
           <Route path={RoutesPathConfig.facilityManagement}>
-            <FacilityManagementPage />
+            <FacilityManagementPage setPos={setPos} />
           </Route>
           <Route path={RoutesPathConfig.offboarding}>
-            <OffboardingPage />
+            <OffboardingPage setPos={setPos} />
           </Route>
           <Route path={RoutesPathConfig.aboutAndVision}>
-            <AboutAndVisionPage />
+            <AboutAndVisionPage setPos={setPos} />
           </Route>
           <Route path={RoutesPathConfig.professionalService}>
-            <ProfessionalManegementPage />
+            <ProfessionalManegementPage setPos={setPos} />
           </Route>
           <Route path={RoutesPathConfig.handyHr}>
-            <HandyHRPage />
+            <HandyHRPage setPos={setPos} />
           </Route>
           <Route path={RoutesPathConfig.performanceManagement}>
-            <ManagementPage />
+            <ManagementPage setPos={setPos} />
           </Route>
           <Route path={RoutesPathConfig.payroll}>
-            <PayrollPage />
+            <PayrollPage setPos={setPos} />
           </Route>
           <Route path={RoutesPathConfig.hrms}>
-            <HrmsPage />
+            <HrmsPage setPos={setPos} />
           </Route>
           <Route path={RoutesPathConfig.recruitment}>
-            <RecruitmentPage />
+            <RecruitmentPage setPos={setPos} />
           </Route>
           <Route path={RoutesPathConfig.home}>
             <HomePageComponent setPos={setPos} />
@@ -91,7 +91,6 @@ export default function App() {
           <span className="btn--burger__part btn--burger__part--down"></span>
         </button>
       </aside>
-
       <div className="btn btn--burger btn--burger--overlay btn--burger--overlay--0">
         <span className="btn--burger__part btn--burger__part--up"></span>
         <span className="btn--burger__part btn--burger__part--down"></span>

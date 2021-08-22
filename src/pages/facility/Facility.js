@@ -1,13 +1,23 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { GoToHomePageLinkLogo, HrmsFooterComp } from "../../components";
 import "./facility.css";
 import { FacilityCardList } from "../../fixtures/facilty-card-list";
+import { amountscrolled } from "../../helper/scroll";
 export default function FacilityManagement() {
   const videoRef = useRef();
   const control = useRef();
+  useEffect(() => {
+    const scrollHandle = () => {
+      var perc = amountscrolled();
+      setPos((p) => perc * 1.07);
+    };
+    window.addEventListener("scroll", scrollHandle, false);
+    return () => {
+      window.removeEventListener("scroll", scrollHandle, false);
+    };
+  }, []);
   const handlePlay = () => {
     var media = videoRef.current;
-
     if (media.paused) {
       media.play();
       control.current.src = "/images/pause.png";
@@ -19,7 +29,6 @@ export default function FacilityManagement() {
   return (
     <div className="homePage">
       <div className="homePage--grid facility">
-        {/* <img alt="recruitment-poster" src="/images/hrms.png" /> */}
         <div className="homePage--overlay">
           <div id="intro" className="intro--index not">
             <div className="grid   hero-parent  ">
@@ -62,9 +71,8 @@ export default function FacilityManagement() {
             <div className="facility-management-video-holder">
               <video
                 ref={videoRef}
-                src="/images/globe.mp4"
+                src="/images/facility.mp4"
                 loop
-                muted
                 playsInline
               ></video>
               <div className="play-btn-video">

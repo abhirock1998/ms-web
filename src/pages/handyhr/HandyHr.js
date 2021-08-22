@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./handyhr.css";
 import { GoToHomePageLinkLogo, HrmsFooterComp } from "../../components";
+import { amountscrolled } from "../../helper/scroll";
 const appFeatures = [
   "Facial Recognition Attendance ",
   "Offline Attendance for 24/7 uptime",
@@ -9,13 +10,22 @@ const appFeatures = [
   "Overtime & Half Day Calculation",
   "In Built Offline Face Storage Capacity",
   "Detection Process- Image and Retina",
-  "Employee Self Service"
+  "Employee Self Service",
 ];
 export default function HandyHrComponent() {
+  useEffect(() => {
+    const scrollHandle = () => {
+      var perc = amountscrolled();
+      setPos((p) => perc * 1.07);
+    };
+    window.addEventListener("scroll", scrollHandle, false);
+    return () => {
+      window.removeEventListener("scroll", scrollHandle, false);
+    };
+  }, []);
   return (
     <div className="homePage">
       <div className="homePage--grid handyhr">
-        {/* <img alt="recruitment-poster" src="/images/hr.png" /> */}
         <div className="homePage--overlay ">
           <div id="intro" className="intro--index not">
             <div className="grid   hero-parent  ">
@@ -52,7 +62,6 @@ export default function HandyHrComponent() {
               />
             </div>
           </div>
-
           <div className="hr-handy-app-milestone similar-grid">
             <div className="hr-handy-app-center">
               <h3>MILES AHEAD OF THE CURVE</h3>

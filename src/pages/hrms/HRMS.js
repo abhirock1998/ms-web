@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./hrms.css";
-
 import { GoToHomePageLinkLogo, HrmsFooterComp } from "../../components";
-export default function HRMSCompomnent() {
+import { amountscrolled } from "../../helper/scroll";
+export default function HRMSCompomnent({ setPos }) {
+  useEffect(() => {
+    const scrollHandle = () => {
+      var perc = amountscrolled();
+      setPos((p) => perc * 1.07);
+    };
+    window.addEventListener("scroll", scrollHandle, false);
+    return () => {
+      window.removeEventListener("scroll", scrollHandle, false);
+    };
+  }, []);
   return (
     <div className="homePage">
       <div className="homePage--grid hrms">
-        {/* <img alt="recruitment-poster" src="/images/hrms.png" /> */}
         <div className="homePage--overlay recruitment">
           <div id="intro" className="intro--index not">
             <div className="grid   hero-parent  ">
@@ -109,7 +118,6 @@ export default function HRMSCompomnent() {
                 </p>
               </div>
             </div>
-            {/* <img src="/images/travel.png" alt="" /> */}
           </div>
           <div className="job-requistion-section form similar-grid">
             <div className="job-right-section">
@@ -142,10 +150,16 @@ export default function HRMSCompomnent() {
               />
             </div>
           </div>
-          {/* <div className="applicant-tracking-section"> */}
           <div className="job-requistion-section chatbot similar-grid ">
             <div className="job-right-section">
-              <video muted src="/images/chatbot.mp4" loop autoPlay></video>
+              <video
+                style={{ zIndex: "10", height: "300px" }}
+                controls
+                muted
+                src="/images/chatbot.mp4"
+                loop
+                autoPlay
+              ></video>
             </div>
             <div className="job-left-section">
               <h2>Chatbot</h2>
@@ -157,13 +171,10 @@ export default function HRMSCompomnent() {
               </p>
             </div>
           </div>
-          {/* </div> */}
           <div className="hrms-handyhrms-app">
             <h2>HandyHR App</h2>
             <p>Learn how we at Megasoft can help you empower your business </p>
-            {/* <div className="hrms-handyhrms-holder similar-grid"> */}
             <img src="/images/mobile.png" alt="hrmshandy-app-poster" />
-            {/* </div>// */}
           </div>
           <div className="download-app-section">
             <div className="left-section">
@@ -174,7 +185,14 @@ export default function HRMSCompomnent() {
               </h3>
             </div>
             <div className="right-section">
-              <button id="download-app-btn">Download Now</button>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://play.google.com/store/apps/details?id=com.ms.handyHRv2&hl=en_IN&gl=US"
+                id="download-app-btn"
+              >
+                Download Now
+              </a>
             </div>
           </div>
           <HrmsFooterComp />
