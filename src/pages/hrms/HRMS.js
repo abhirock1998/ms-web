@@ -152,14 +152,7 @@ export default function HRMSCompomnent({ setPos }) {
           </div>
           <div className="job-requistion-section chatbot similar-grid ">
             <div className="job-right-section">
-              <video
-                style={{ zIndex: "10", height: "300px" }}
-                controls
-                muted
-                src="/images/chatbot.mp4"
-                loop
-                autoPlay
-              ></video>
+              <video muted src="/images/chatbot.mp4" loop></video>
             </div>
             <div className="job-left-section">
               <h2>Chatbot</h2>
