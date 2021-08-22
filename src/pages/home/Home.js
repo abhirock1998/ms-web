@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 import { GoToHomePageLinkLogo } from "../../components";
 import { smallScreenLinkList } from "../../fixtures/routes-config";
 import { PathConfig } from "../../fixtures/routes-path-config";
+import { TranslatedContent } from "../../translated-language-content/main-page-translated-content";
 export default function HomePage({ setPos }) {
-  const { selectedLanguage } = useSelector((state) => state);
+  const { selectedLanguage = "en" } = useSelector((state) => state);
   React.useEffect(() => {
     const elem = document.querySelector(".scroll-content");
     elem.addEventListener("scroll", (e) => {
@@ -34,14 +35,12 @@ export default function HomePage({ setPos }) {
               </div>
               <div className="intro-heading half home-page   ">
                 <h1 id="heading home-page">
-                  A fully customised comprehensive technological infrastructure
-                  with end-to-end service support, for superior human resource
-                  management.
+                  {TranslatedContent[selectedLanguage]["mainTitle"]}
                 </h1>
                 <div className="small-device-home-page-wrapper">
                   <ul>
                     <li>
-                      {smallScreenLinkList.map((link, i) => (
+                      {smallScreenLinkList[selectedLanguage].map((link, i) => (
                         <Link key={i} to={`/${selectedLanguage}${link.link}`}>
                           {link.title}
                         </Link>
@@ -50,7 +49,7 @@ export default function HomePage({ setPos }) {
                   </ul>
                   <div className="small-device-home-page-button-wrapper">
                     <Link to={`/${selectedLanguage}${PathConfig.takeaDemo}`}>
-                      Take Demo
+                      {TranslatedContent[selectedLanguage]["takeADemo"]}
                     </Link>
                   </div>
                 </div>
@@ -64,25 +63,33 @@ export default function HomePage({ setPos }) {
                   <div className="scroll-content">
                     <div>
                       <div className="intro-content-link-container">
-                        {smallScreenLinkList.map((data, idx) => (
-                          <Link
-                            className="link-loop"
-                            key={idx}
-                            to={`/${selectedLanguage}${data.link}`}
-                          >
-                            <div className="intro__content__link__wrap">
-                              <small className="intro__link__title ">
-                                {data.title}
-                              </small>
-                              <div className="btn-container fading-text">
-                                <span className="btn btn--arrow btn--arrow--white">
-                                  View
-                                </span>
+                        {smallScreenLinkList[selectedLanguage].map(
+                          (data, idx) => (
+                            <Link
+                              className="link-loop"
+                              key={idx}
+                              to={`/${selectedLanguage}${data.link}`}
+                            >
+                              <div className="intro__content__link__wrap">
+                                <small className="intro__link__title ">
+                                  {data.title}
+                                </small>
+                                <div className="btn-container fading-text">
+                                  <span className="btn btn--arrow btn--arrow--white">
+                                    {selectedLanguage === "en"
+                                      ? " View"
+                                      : selectedLanguage === "fr"
+                                      ? "vue"
+                                      : selectedLanguage === "it"
+                                      ? "Visualizza"
+                                      : "weergave"}
+                                  </span>
+                                </div>
                               </div>
-                            </div>
-                            <div className="intro_content__link__border intro_content__link__border--anim"></div>
-                          </Link>
-                        ))}
+                              <div className="intro_content__link__border intro_content__link__border--anim"></div>
+                            </Link>
+                          )
+                        )}
                       </div>
                       <div className="scroll-content-border scroll-content-left-side-border"></div>
                       <div className="scroll-content-border scroll-content-right-side-border"></div>
@@ -91,10 +98,15 @@ export default function HomePage({ setPos }) {
                 </section>
                 <div className="intro__content__contacts">
                   <div className="intro__content__contacts-anim">
-                    <small>Contact us</small>
+                    <small>
+                      {TranslatedContent[selectedLanguage]["contactTitle"]}
+                    </small>
                     <p>
-                      Feel free to get in touch with us. Our team is here to
-                      help you with any questions you may have.
+                      {
+                        TranslatedContent[selectedLanguage][
+                          "contactDescription"
+                        ]
+                      }
                     </p>
                     <div className="contact-list contact-list--white contact-list--small">
                       <ul>
@@ -116,7 +128,7 @@ export default function HomePage({ setPos }) {
                       to={`/${selectedLanguage}${PathConfig.takeaDemo}`}
                       className="home-page-btn"
                     >
-                      Take a Demo
+                      {TranslatedContent[selectedLanguage]["takeADemo"]}
                     </Link>
                   </div>
                 </div>

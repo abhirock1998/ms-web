@@ -187,6 +187,7 @@
   align-items: center;
   cursor: pointer;
   border: 2px solid #fff;
+  text-align: center;
   justify-content: center;
 }
 
