@@ -36,6 +36,8 @@ export default function DemoPage() {
         company_name: "",
         company_size: "",
       });
+    } else {
+      alert("Fill All the input fields !!!");
     }
   };
 

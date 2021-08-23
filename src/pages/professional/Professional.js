@@ -46,6 +46,8 @@ export default function ProfessionalComponent({ setPos }) {
         company_name: "",
         company_size: "",
       });
+    } else {
+      alert("Fill All the input fields !!!");
     }
   };
 
