@@ -3,7 +3,7 @@ import { GoToHomePageLinkLogo, HrmsFooterComp } from "../../components";
 import "./facility.css";
 import { FacilityCardList } from "../../fixtures/facilty-card-list";
 import { amountscrolled } from "../../helper/scroll";
-export default function FacilityManagement() {
+export default function FacilityManagement({ setPos }) {
   const videoRef = useRef();
   const control = useRef();
   useEffect(() => {

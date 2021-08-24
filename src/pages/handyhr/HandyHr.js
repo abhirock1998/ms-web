@@ -12,7 +12,7 @@ const appFeatures = [
   "Detection Process- Image and Retina",
   "Employee Self Service",
 ];
-export default function HandyHrComponent() {
+export default function HandyHrComponent({ setPos }) {
   useEffect(() => {
     const scrollHandle = () => {
       var perc = amountscrolled();

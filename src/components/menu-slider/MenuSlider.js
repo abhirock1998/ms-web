@@ -90,7 +90,7 @@ export default function MenuSliderPage({ menu, handle }) {
               id="lang-switcher"
               className="footer--social-logo menu lang-switcher lang-switcher--footer"
             >
-              <ul>
+              {/* <ul>
                 <li
                   className={`${selectedLanguage === "fr" ? "active" : null}`}
                 >
@@ -124,7 +124,7 @@ export default function MenuSliderPage({ menu, handle }) {
                     en
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
           <div className="menu__right fetchClass">

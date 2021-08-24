@@ -126,9 +126,9 @@ small.white {
   height: 100vh;
 }
 /* .support-text {
-  margin: 0 0 180px;
-  width: 600px;
-} */
+    margin: 0 0 180px;
+    width: 600px;
+  } */
 @media screen and (max-width: 1108px) {
   .points {
     display: none;

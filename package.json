@@ -1,15 +1,13 @@
 {
   "name": "ms-website",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "MS website using ReactJS framework with fully responsiveness for all devices",
   "keywords": [
     "react",
     "starter"
   ],
   "dependencies": {
-    "@vitalets/google-translate-api": "7.0.0",
     "emailjs-com": "^3.2.0",
-    "gsap": "3.6.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-redux": "7.2.4",

@@ -16,6 +16,7 @@ import {
   FacilityManagementPage,
 } from "./pages";
 import "./styles.css";
+import "./app.css";
 import { MenuSliderComp } from "./components";
 import { RoutesPathConfig } from "./fixtures/routes-path-config";
 export default function App() {
