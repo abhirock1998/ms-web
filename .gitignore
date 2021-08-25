@@ -14,7 +14,7 @@
 /build
 
 # misc
-#.env comment out in Production Env so that EMAILJS credentails will be safe
+ .env
 .DS_Store
 .env.local
 .env.development.local
