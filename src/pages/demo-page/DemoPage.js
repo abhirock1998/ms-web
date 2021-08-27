@@ -1,9 +1,14 @@
 import React, { useRef, useState } from "react";
 import "./demo-page.css";
 import { GoToHomePageLinkLogo } from "../../components";
-import { SendFormat, sendMailToGmail } from "../../helper/send-mail";
 import { SendContactFormDetails } from "../../helper/node-mailer";
-
+const SendFormat = {
+  fromName: "from_name",
+  mobile: "mobile",
+  email: "email",
+  compName: "company_name",
+  compSize: " company_size",
+};
 export default function DemoPage() {
   const btn = useRef();
   const [detail, setDetails] = useState({

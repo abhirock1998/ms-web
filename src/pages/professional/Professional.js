@@ -2,9 +2,15 @@ import React, { useEffect, useRef, useState } from "react";
 import "./professional.css";
 import { GoToHomePageLinkLogo, HrmsFooterComp } from "../../components";
 import { ProfessionalServicesContent } from "../../fixtures/pages-content/proffessional-services";
-import { SendFormat } from "../../helper/send-mail";
 import { amountscrolled } from "../../helper/scroll";
 import { SendContactFormDetails } from "../../helper/node-mailer";
+const SendFormat = {
+  fromName: "from_name",
+  mobile: "mobile",
+  email: "email",
+  compName: "company_name",
+  compSize: " company_size",
+};
 export default function ProfessionalComponent({ setPos }) {
   const btn = useRef();
   const [detail, setDetails] = useState({
