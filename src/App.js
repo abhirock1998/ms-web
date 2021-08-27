@@ -78,6 +78,9 @@ export default function App() {
           <Route path={RoutesPathConfig.languageSelect}>
             <LanguageSelectedPage />
           </Route>
+          <Route path="*">
+            <HomePageComponent setPos={setPos} />
+          </Route>
         </Switch>
       </section>
       {/* Sidebar in right width fixed position */}

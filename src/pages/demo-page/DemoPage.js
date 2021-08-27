@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import "./demo-page.css";
 import { GoToHomePageLinkLogo } from "../../components";
 import { SendFormat, sendMailToGmail } from "../../helper/send-mail";
+import { SendContactFormDetails } from "../../helper/node-mailer";
+
 export default function DemoPage() {
   const btn = useRef();
   const [detail, setDetails] = useState({
@@ -11,9 +13,9 @@ export default function DemoPage() {
     company_name: "",
     company_size: "",
   });
-  const handleMail = async () => {
+  const handleMail = async (e) => {
+    e.preventDefault();
     let count = 0;
-
     for (const [key, _] of Object.entries(detail)) {
       if (detail[key].length > 0 && detail[key] !== "") {
         count++;
@@ -21,12 +23,11 @@ export default function DemoPage() {
     }
     if (count === 5) {
       btn.current.innerHTML = "Sending ...";
-      var number = await sendMailToGmail(detail);
-
-      if (number === 200) {
-        alert("Message Sent Successfully");
-      } else if (number === null) {
-        alert("Something went wrong !");
+      var { status, msg } = await SendContactFormDetails(detail);
+      if (status === 200) {
+        alert(msg);
+      } else {
+        alert(msg);
       }
       btn.current.innerHTML = "Send";
       setDetails({
@@ -42,18 +43,10 @@ export default function DemoPage() {
   };
 
   const handleChange = (e) => {
-    e.preventDefault();
-    const {
-      name,
-      value,
-      validity: { valid },
-    } = e.target;
-
-    if (valid) {
-      setDetails((pre) => {
-        return { ...pre, [name]: value };
-      });
-    }
+    const { name, value } = e.target;
+    setDetails((pre) => {
+      return { ...pre, [name]: value };
+    });
   };
   return (
     <div className="homePage">
@@ -72,10 +65,11 @@ export default function DemoPage() {
                         Contact Us for a Demo
                         <img src="/images/clap.png" alt="" />
                       </h1>
-                      <div className="demo-page-form-wrapper">
+                      <form className="demo-page-form-wrapper">
                         <div className="form-row-wrapper">
                           <div className="demo-page-form-wrapper-half">
                             <input
+                              required
                               type="text"
                               onChange={handleChange}
                               name={SendFormat.fromName}
@@ -85,6 +79,7 @@ export default function DemoPage() {
                           </div>
                           <div className="demo-page-form-wrapper-half">
                             <input
+                              required
                               type="tel"
                               minLength={10}
                               pattern="[0-9]{10}"
@@ -98,6 +93,7 @@ export default function DemoPage() {
 
                         <div className="demo-page-form-wrapper-full">
                           <input
+                            required
                             value={detail.email}
                             type="email"
                             pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*"
@@ -110,6 +106,7 @@ export default function DemoPage() {
                         <div className="form-row-wrapper">
                           <div className="demo-page-form-wrapper-half">
                             <input
+                              required
                               type="text"
                               value={detail.company_name}
                               onChange={handleChange}
@@ -119,6 +116,7 @@ export default function DemoPage() {
                           </div>
                           <div className="demo-page-form-wrapper-half">
                             <input
+                              required
                               value={detail.company_size}
                               type="text"
                               onChange={handleChange}
@@ -129,6 +127,7 @@ export default function DemoPage() {
                         </div>
                         <button
                           ref={btn}
+                          type="submit"
                           onClick={handleMail}
                           id="form-submit-btn"
                         >
@@ -137,7 +136,7 @@ export default function DemoPage() {
                         <p id="form-response-time">
                           <small>We usually reply within 24-48 hours</small>
                         </p>
-                      </div>
+                      </form>
                     </div>
                     <div className="demo-page-half">
                       <img src="/images/laptop.png" alt="" />

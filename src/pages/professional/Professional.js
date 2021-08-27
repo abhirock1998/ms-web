@@ -2,8 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import "./professional.css";
 import { GoToHomePageLinkLogo, HrmsFooterComp } from "../../components";
 import { ProfessionalServicesContent } from "../../fixtures/pages-content/proffessional-services";
-import { sendMailToGmail, SendFormat } from "../../helper/send-mail";
+import { SendFormat } from "../../helper/send-mail";
 import { amountscrolled } from "../../helper/scroll";
+import { SendContactFormDetails } from "../../helper/node-mailer";
 export default function ProfessionalComponent({ setPos }) {
   const btn = useRef();
   const [detail, setDetails] = useState({
@@ -23,7 +24,8 @@ export default function ProfessionalComponent({ setPos }) {
       window.removeEventListener("scroll", scrollHandle, false);
     };
   }, []);
-  const handleMail = async () => {
+  const handleMail = async (e) => {
+    e.preventDefault();
     let count = 0;
     for (const [key, _] of Object.entries(detail)) {
       if (detail[key].length > 0 && detail[key] !== "") {
@@ -32,11 +34,11 @@ export default function ProfessionalComponent({ setPos }) {
     }
     if (count === 5) {
       btn.current.innerHTML = "Sending ...";
-      var number = await sendMailToGmail(detail);
-      if (number === 200) {
-        alert("Message Sent Successfully");
-      } else if (number === null) {
-        alert("Something went wrong !");
+      var { status, msg } = await SendContactFormDetails(detail);
+      if (status === 200) {
+        alert(msg);
+      } else {
+        alert(msg);
       }
       btn.current.innerHTML = "Send";
       setDetails({
@@ -52,18 +54,10 @@ export default function ProfessionalComponent({ setPos }) {
   };
 
   const handleChange = (e) => {
-    e.preventDefault();
-    const {
-      name,
-      value,
-      validity: { valid },
-    } = e.target;
-
-    if (valid) {
-      setDetails((pre) => {
-        return { ...pre, [name]: value };
-      });
-    }
+    const { name, value } = e.target;
+    setDetails((pre) => {
+      return { ...pre, [name]: value };
+    });
   };
   return (
     <div className="homePage">
@@ -106,10 +100,11 @@ export default function ProfessionalComponent({ setPos }) {
           </div>
           <div className="professional-wrapper-contact similar-grid">
             <h2>Contact Us</h2>
-            <div className="professional-form">
+            <form className="professional-form">
               <div className="professional-form-flex">
                 <div className="professional-form-half">
                   <input
+                    required
                     type="text"
                     onChange={handleChange}
                     name={SendFormat.fromName}
@@ -119,6 +114,7 @@ export default function ProfessionalComponent({ setPos }) {
                 </div>
                 <div className="professional-form-half">
                   <input
+                    required
                     type="tel"
                     minLength={10}
                     pattern="[0-9]{10}"
@@ -131,6 +127,7 @@ export default function ProfessionalComponent({ setPos }) {
               </div>
               <div className="professional-form-flex">
                 <input
+                  required
                   value={detail.email}
                   type="email"
                   pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*"
@@ -143,6 +140,7 @@ export default function ProfessionalComponent({ setPos }) {
               <div className="professional-form-flex">
                 <div className="professional-form-half">
                   <input
+                    required
                     type="text"
                     value={detail.company_name}
                     onChange={handleChange}
@@ -152,6 +150,7 @@ export default function ProfessionalComponent({ setPos }) {
                 </div>
                 <div className="professional-form-half">
                   <input
+                    required
                     value={detail.company_size}
                     type="text"
                     onChange={handleChange}
@@ -160,10 +159,10 @@ export default function ProfessionalComponent({ setPos }) {
                   />
                 </div>
               </div>
-              <button ref={btn} onClick={handleMail}>
+              <button type="submit" ref={btn} onClick={handleMail}>
                 Send
               </button>
-            </div>
+            </form>
           </div>
           <HrmsFooterComp />
         </div>
