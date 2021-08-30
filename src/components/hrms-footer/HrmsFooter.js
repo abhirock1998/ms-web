@@ -21,10 +21,10 @@ export default function HrmsFotter() {
               subscribe to our newsletter for updates on compliance, payroll
               management and other industry insights
             </p>
-            <div className="footer-first-column-subscribe-wrapper">
-              <input type="email" placeholder="EMAIl Address" />
+            <form className="footer-first-column-subscribe-wrapper">
+              <input required type="email" placeholder="EMAIl Address" />
               <button>Susbcribe</button>
-            </div>
+            </form>
           </div>
           <div className="footer-second-column">
             <Link to={`/${selectedLanguage}/`}>

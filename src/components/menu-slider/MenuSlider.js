@@ -65,7 +65,6 @@ export default function MenuSliderPage({ menu = false, handle }) {
       className={` ${menu ? "active" : "hide"} `}
     >
       <div className="menu__container">
-        {/* <div className="menu__logo sm-show"></div> */}
         <div className="grid grid--menu ">
           <div className="menu__left">
             <small>Menu</small>
@@ -101,43 +100,7 @@ export default function MenuSliderPage({ menu = false, handle }) {
             <div
               id="lang-switcher"
               className="footer--social-logo menu lang-switcher lang-switcher--footer"
-            >
-              {/* <ul>
-                <li
-                  className={`${selectedLanguage === "fr" ? "active" : null}`}
-                >
-                  <a data-lang="fr" href="/fr/service-assistance">
-                    fr
-                  </a>
-                </li>
-                <li
-                  className={`${selectedLanguage === "it" ? "active" : null}`}
-                >
-                  <a data-lang="it" href="/it/assistenza-e-supporto">
-                    it
-                  </a>
-                </li>
-                <li
-                  className={`${selectedLanguage === "de" ? "active" : null}`}
-                >
-                  <a data-lang="de" href="/de/service-support-2">
-                    de
-                  </a>
-                </li>
-                <li
-                  className={`${selectedLanguage === "en" ? "active" : null}`}
-                >
-                  <a
-                    aria-current="page"
-                    className=""
-                    data-lang="en"
-                    href="/en/service-support"
-                  >
-                    en
-                  </a>
-                </li>
-              </ul> */}
-            </div>
+            ></div>
           </div>
           <div className="menu__right fetchClass">
             <nav id="main-nav">
@@ -163,7 +126,6 @@ export default function MenuSliderPage({ menu = false, handle }) {
           </div>
         </div>
       </div>
-      {/* <div className="page-overlay"></div> */}
     </section>
   );
 }
