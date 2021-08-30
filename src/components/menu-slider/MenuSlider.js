@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { mainLinks, hrmSubMenuList } from "../../fixtures/routes-config";
@@ -9,11 +9,18 @@ export default function MenuSliderPage({ menu = false, handle }) {
   );
   const [activeLink, setActiveLink] = useState(0);
   const [subMenu, setSubMenu] = useState(0);
-
+  const ref = useRef(false);
   useEffect(() => {
     setActiveLink(activePageLink);
     setSubMenu(subActiveMenuLink);
   }, [activePageLink, subActiveMenuLink]);
+  useEffect(() => {
+    var section = document.querySelector("#menu");
+    if (menu === false && !ref.current) {
+      ref.current = true;
+      section.style.display = "none";
+    }
+  }, [menu]);
   const displayHrmsLinks = () => {
     const slide = document.querySelector(".fetchClass");
     slide.classList.add("active");
@@ -43,6 +50,7 @@ export default function MenuSliderPage({ menu = false, handle }) {
       handleHrmsSubMenu(null);
       handle();
     }
+
     hideHrmsLink(idx);
   };
   const handleHrmsSubMenu = (link) => {
@@ -51,7 +59,11 @@ export default function MenuSliderPage({ menu = false, handle }) {
     handle();
   };
   return (
-    <section id="menu" className={` ${menu ? "active" : "hide"} `}>
+    <section
+      style={{ display: menu && "unset" }}
+      id="menu"
+      className={` ${menu ? "active" : "hide"} `}
+    >
       <div className="menu__container">
         {/* <div className="menu__logo sm-show"></div> */}
         <div className="grid grid--menu ">

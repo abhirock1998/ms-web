@@ -44,7 +44,7 @@ export default function ProfessionalComponent({ setPos }) {
       if (status === 200) {
         alert(msg);
       } else {
-        alert(msg);
+        alert(msg || "Server is Not Connected");
       }
       btn.current.innerHTML = "Send";
       setDetails({
