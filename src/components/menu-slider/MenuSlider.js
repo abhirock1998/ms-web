@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { mainLinks, hrmSubMenuList } from "../../fixtures/routes-config";
-export default function MenuSliderPage({ menu, handle }) {
+export default function MenuSliderPage({ menu = false, handle }) {
   const dispatch = useDispatch();
   const { activePageLink, selectedLanguage, subActiveMenuLink } = useSelector(
     (state) => state

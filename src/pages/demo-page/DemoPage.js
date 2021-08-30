@@ -7,7 +7,7 @@ const SendFormat = {
   mobile: "mobile",
   email: "email",
   compName: "company_name",
-  compSize: " company_size",
+  compSize: "company_size",
 };
 export default function DemoPage() {
   const btn = useRef();

@@ -9,7 +9,7 @@ const SendFormat = {
   mobile: "mobile",
   email: "email",
   compName: "company_name",
-  compSize: " company_size",
+  compSize: "company_size",
 };
 export default function ProfessionalComponent({ setPos }) {
   const btn = useRef();

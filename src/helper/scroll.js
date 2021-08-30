@@ -20,6 +20,5 @@ export const amountscrolled = () => {
       .scrollTop;
   var trackLength = docheight - winheight;
   var pctScrolled = Math.floor((scrollTop / trackLength) * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
-  console.log(pctScrolled + "% scrolled", scrollTop, trackLength);
   return scrollTop;
 };
