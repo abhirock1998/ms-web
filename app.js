@@ -6,7 +6,7 @@ const nodemailer = require("nodemailer");
 const PORT = process.env.PORT || 9090;
 app.use(cors());
 app.use(json());
-console.log(process.env);
+
 async function handleNodeMailer(data) {
   var { from_name, email, company_name, company_size, mobile } = data;
   const htmlFormat = `<html> <body>  <h2>New Message</h2><p><b>Name </b>: ${from_name} </p>
