@@ -47,7 +47,7 @@ export default function DemoPage() {
                         English
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link onClick={() => selectedLanguage("de")} to="/de/">
                         Deutsch
                       </Link>
@@ -61,7 +61,7 @@ export default function DemoPage() {
                       <Link onClick={() => selectedLanguage("fr")} to="/fr/">
                         Francais
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                   <div className="language-option-fade animate-class" />
                 </div>

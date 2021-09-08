@@ -32,9 +32,9 @@ export default function App() {
     setMenu(!menu);
   };
   return (
-    <div className="App">
-      {/* ALL PAGES AND THEIR ROUTES GORS HERE*/}
-      <section data-scrollbar="true" id="scroll-container">
+    <div className="App abhishek">
+      {/* ALL PAGES AND THEIR ROUTES GOES HERE*/}
+      <section data-scrollbar="true" id="scroll-container abhishek">
         <Switch>
           <Route path={RoutesPathConfig.contact}>
             <CompanyDemoPage />
@@ -84,10 +84,10 @@ export default function App() {
         </Switch>
       </section>
       {/* Sidebar in right width fixed position */}
-      <aside className=" ">
+      <aside className=" abhishek">
         <button
           onClick={handleSlide}
-          className={`btn btn--burger ${
+          className={`btn btn--burger abhishek${
             menu ? "active" : ""
           } btn--blank menu-toggle`}
         >
@@ -113,8 +113,8 @@ export default function App() {
       </div>
       <div className="scrollbar-thumb scrollbar-thumb-y clone clone--1"></div>
       <div className="scrollbar-thumb scrollbar-thumb-y clone clone--2"></div>
-      <div className="scrollbar-thumb scrollbar-thumb-y clone clone--3"></div>
-      <div className="scrollbar-thumb scrollbar-thumb-y clone clone--4"></div>
+      <div className="scrollbar-thumb scrollbar-thumb-y clone clone--3 abhishek"></div>
+      <div className="scrollbar-thumb scrollbar-thumb-y clone clone--4 abhishek"></div>
       <MenuSliderComp menu={menu} handle={handleSlide} />
       <div className="scrollbar-line scrollbar-line--1"></div>
       <div className="scrollbar-line scrollbar-line--2"></div>
