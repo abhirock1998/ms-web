@@ -16,6 +16,11 @@ export default function FacilityManagement({ setPos }) {
       window.removeEventListener("scroll", scrollHandle, false);
     };
   }, []);
+  useEffect(() => {
+    document.querySelectorAll(".scrollbar-thumb").forEach((link) => {
+      link.style.transform = `translateY(0px)`;
+    });
+  }, []);
   const handlePlay = () => {
     var media = videoRef.current;
     if (media.paused) {

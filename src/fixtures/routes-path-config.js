@@ -29,4 +29,5 @@ export const RoutesPathConfig = {
   offboarding: `/:id${PathConfig.offboarding}`,
   login: `/:id${PathConfig.login}`,
   professionalService: `/:id${PathConfig.professionalService}`,
+  dataService: `/:id${PathConfig.dataAndSecurity}`,
 };

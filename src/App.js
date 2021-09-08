@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import {
   AboutAndVisionPage,
@@ -14,6 +14,7 @@ import {
   ProfessionalManegementPage,
   RecruitmentPage,
   FacilityManagementPage,
+  DataSecurityPrivacy,
 } from "./pages";
 import "./styles.css";
 import "./app.css";
@@ -22,7 +23,7 @@ import { RoutesPathConfig } from "./fixtures/routes-path-config";
 export default function App() {
   const [pos, setPos] = React.useState(0);
   const [menu, setMenu] = React.useState(false);
-  React.useEffect(() => {
+  useEffect(() => {
     document.querySelectorAll(".scrollbar-thumb").forEach((link) => {
       link.style.transform = `translateY(${pos}px)`;
       link.style.transition = "transform .5s linear";
@@ -31,6 +32,7 @@ export default function App() {
   const handleSlide = () => {
     setMenu(!menu);
   };
+
   return (
     <div className="App abhishek">
       {/* ALL PAGES AND THEIR ROUTES GOES HERE*/}
@@ -41,6 +43,9 @@ export default function App() {
           </Route>
           <Route path={RoutesPathConfig.login}>
             <LoginPage />
+          </Route>
+          <Route path={RoutesPathConfig.dataService}>
+            <DataSecurityPrivacy setPos={setPos} />
           </Route>
           <Route path={RoutesPathConfig.takeaDemo}>
             <CompanyDemoPage setPos={setPos} />

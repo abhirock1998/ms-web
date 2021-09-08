@@ -4,6 +4,11 @@ import { GoToHomePageLinkLogo, HrmsFooterComp } from "../../components";
 import { amountscrolled } from "../../helper/scroll";
 export default function PerformanceManagement({ setPos }) {
   useEffect(() => {
+    document.querySelectorAll(".scrollbar-thumb").forEach((link) => {
+      link.style.transform = `translateY(0px)`;
+    });
+  }, []);
+  useEffect(() => {
     const scrollHandle = () => {
       var perc = amountscrolled();
       setPos((p) => perc * 1.07);

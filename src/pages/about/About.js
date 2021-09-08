@@ -17,6 +17,11 @@ export default function About({ setPos }) {
       window.removeEventListener("scroll", scrollHandle, false);
     };
   }, []);
+  useEffect(() => {
+    document.querySelectorAll(".scrollbar-thumb").forEach((link) => {
+      link.style.transform = `translateY(0px)`;
+    });
+  }, []);
   return (
     <div className="homePage">
       <div className="homePage--grid about-and-vision">

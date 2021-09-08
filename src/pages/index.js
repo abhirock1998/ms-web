@@ -11,3 +11,4 @@ export { default as OffboardingPage } from "./offboarding/Offboarding";
 export { default as CompanyDemoPage } from "./demo-page/DemoPage";
 export { default as LoginPage } from "./login/Login";
 export { default as FacilityManagementPage } from "./facility/Facility";
+export { default as DataSecurityPrivacy } from "./data-security/DataSecurity";

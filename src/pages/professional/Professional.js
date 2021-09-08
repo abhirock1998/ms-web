@@ -20,6 +20,11 @@ export default function ProfessionalComponent({ setPos }) {
     company_size: "",
   });
   useEffect(() => {
+    document.querySelectorAll(".scrollbar-thumb").forEach((link) => {
+      link.style.transform = `translateY(0px)`;
+    });
+  }, []);
+  useEffect(() => {
     const scrollHandle = () => {
       var perc = amountscrolled();
       setPos((p) => perc * 1.07);

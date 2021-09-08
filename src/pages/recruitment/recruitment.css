@@ -78,6 +78,14 @@
   -moz-background-size: cover;
   -o-background-size: cover;
 }
+.homePage > .homePage--grid.data-security {
+  background: url(../../assests/privacy.png) no-repeat calc(100% - 12%) center,
+    linear-gradient(#000, rgba(0, 0, 0, 1)) no-repeat center center;
+  background-size: contain, cover;
+  -webkit-background-size: contain, cover;
+  -moz-background-size: contain, cover;
+  -o-background-size: contain, cover;
+}
 /* asdasdf */
 #intro .grid .intro-heading.half.recruitment {
   width: 60%;

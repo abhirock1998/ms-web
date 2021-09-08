@@ -5,6 +5,11 @@ import { amountscrolled } from "../../helper/scroll";
 
 export default function PayrollComponent({ setPos }) {
   useEffect(() => {
+    document.querySelectorAll(".scrollbar-thumb").forEach((link) => {
+      link.style.transform = `translateY(0px)`;
+    });
+  }, []);
+  useEffect(() => {
     const scrollHandle = () => {
       var perc = amountscrolled();
       setPos((p) => perc * 1.07);
