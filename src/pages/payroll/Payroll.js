@@ -88,9 +88,10 @@ export default function PayrollComponent({ setPos }) {
               <div className="bigpayroll-contentBox">
                 <h2>Statutory Reports & Registers</h2>
                 <p>
-                  Effortlessly process by automatically calculating employees
-                  overtime income owed and any other one time payments like
-                  bonus and ex-gratia
+                  Easily access all monthly and annual statutory reports with
+                  just a single click. From PF, ESIC, P.Tax, LWF to TDS reports,
+                  we have an exhaustive bucket of reports for all such statutory
+                  filing needs.
                 </p>
               </div>
               <div className="bigpayroll-contentBox">
